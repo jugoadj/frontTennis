@@ -1,0 +1,115 @@
+body {
+  /* background-image: url("../public/terraintenis.jpg"); */
+  /* background-repeat: repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
+  background-color: #f0f0f0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.listePoints{
+  display: flex;
+  padding: 20px;
+  max-width: 500px;
+}
+.slide-container {
+    overflow: auto;
+    height: 450px;
+    max-width: 350px; /* Hauteur fixe de la liste */
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(42, 84, 120);
+    color: #fff;
+  }
+
+  .slide-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    animation: slideUp 1s ease-out forwards;
+  }
+
+  .slide-container li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+
+.calcScr{
+  background-color: rgb(42, 84, 120);
+  color: #fff;
+  padding: 10px 7px;
+  border-radius: 30px;
+  margin: 10px 0;
+
+}
+.genPnt{
+  background-color: rgb(42, 84, 120);
+  color: #fff;
+  padding: 10px 7px;
+  border-radius: 30px;
+
+
+}
+
+.settings {
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 320px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.player1,
+.player2 {
+  margin-bottom: 20px;
+}
+
+.player1lbl,
+.player2lbl {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.player1lvl,
+.player2lvl {
+  display: block;
+}
+
+input[type="number"] {
+  max-width: 50px;
+}
