@@ -16,10 +16,8 @@ const App = () => {
     const probaJr1 = player1.level / (player1.level + player2.level);
     const probaJr2 = player2.level / (player1.level + player2.level);
 
-    // Générer un nombre aléatoire entre 0 et 1
     const randomValue = Math.random();
 
-    // Si le nombre est inférieur à la probabilité du joueur 1, joueur 1 gagne
     if (randomValue < probaJr1) {
       newPoints.push(player1.name || "Joueur 1");
     } else {
@@ -40,7 +38,7 @@ const App = () => {
   
   const calculateScore = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/tenis/calculate-score", {
+      const response = await axios.post("https://backtennis.onrender.com/api/tenis/calculate-score", {
         points,
         players: [player1.name || "Joueur 1", player2.name || "Joueur 2"],
       });
