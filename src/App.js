@@ -7,6 +7,9 @@ const App = () => {
   const [player2, setPlayer2] = useState({ name: "", level: 5 });
   const [points, setPoints] = useState([]);
   const [result, setResult] = useState(null);
+  const [probaJr1, setProbaJr1] = useState(0);
+  const [probaJr2, setProbaJr2] = useState(0);
+
 
   const generatePoints = async () => {
   const totalPoints = 150;
@@ -14,7 +17,9 @@ const App = () => {
 
   for (let i = 0; i < totalPoints; i++) {
     const probaJr1 = player1.level / (player1.level + player2.level);
+    setProbaJr1(probaJr1);
     const probaJr2 = player2.level / (player1.level + player2.level);
+    setProbaJr2(probaJr2);
 
     const randomValue = Math.random();
 
@@ -108,6 +113,7 @@ const App = () => {
         {points.length > 0 && (
           <div style={{ marginTop: "20px" }}>
             <h2>Points Générés</h2>
+            <h2>{(probaJr1 * 100).toFixed()} % des points sont gagner par {player1.name}</h2>
             <div className="slide-container">
               <ul>
                 {points.map((point, index) => (
